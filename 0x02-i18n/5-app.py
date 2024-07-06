@@ -59,6 +59,7 @@ def get_user():
 
 @app.before_request
 def before_request():
+    """stores the user globally before every request"""
     g.user = get_user()
 
 
